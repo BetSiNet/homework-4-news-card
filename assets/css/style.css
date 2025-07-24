@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px 0;
+  font-family: "Kantumruy Pro", sans-serif;
+  background-color: #b4b4b4;
+}
+
+/* Global css */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: -15px;
+}
+
+.col-4 {
+  padding-inline: 15px;
+  margin-bottom: 30px;
+  width: 33.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+  padding-inline: 15px;
+  margin-bottom: 30px;
+}
+
+.news-area {
+  position: relative;
+}
+
+.news-area .news-label {
+  width: 130px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #1e1e1e;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
+  background-color: #ffffff7e;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+}
+
+.card-img {
+  width: 52%;
+  height: 100%;
+}
+
+.news-card {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.438);
+}
+
+.news-card .card-rectangle {
+  padding: 30px;
+  width: 48%;
+}
+
+.news-card .card-square {
+  padding: 30px;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.card-text {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  position: relative;
+  margin-left: 40px;
+  line-height: 20px;
+}
+
+.card-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 1.5px;
+  height: 100%;
+  background-color: #ffb60b;
+  bottom: -10px;
+}
+
+.card-overlay {
+  position: relative;
+  inset: 0;
+}
+
+.card-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #fb7c18, #d5526b, #d5526a2c);
+}
+
+.triangle {
+  position: relative;
+}
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 20px;
+  border-style: solid;
+  border-width: 20px 30px 20px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+/* class override */
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+/* news-card { card-top } card-rectangle */
+
+.news-card.card-top .card-img {
+  background-image: url("../image/IISc-grant_card_hz_tab_364x362.jpg");
+  background-size: 100% 100%;
+}
+
+.news-card.card-top .card-rectangle {
+  background-color: #fff;
+}
+
+.news-card.card-top .card-rectangle .card-subtitle {
+  color: blue;
+}
+
+.news-card.card-top .card-rectangle .card-title {
+  color: #4a4a4a;
+  margin-top: 4.5rem;
+}
+
+.news-card.card-top .card-rectangle .card-text {
+  margin-top: 2rem;
+  color: #4a4a4a;
+}
+
+/* news-card { card-top } card-square */
+
+.news-card.card-top .card-square {
+  background-color: #1a9ceb;
+}
+
+.news-card.card-top .card-square .card-subtitle {
+  color: #f3f3f3;
+}
+
+.news-card.card-top .card-square .card-title {
+  margin-top: 1.5rem;
+  color: #eeeeee;
+}
+
+.news-card.card-top .card-square .card-text {
+  margin-top: 1.5rem;
+  color: #ebeaea;
+}
+
+.news-card.card-top .card-square .card-text span {
+  color: #eaeaea;
+  font-weight: 500;
+  margin-top: 1rem;
+  font-style: italic;
+  display: block;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+/* news-card { card-bottom } card-square */
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.news-card.card-bottom .card-square {
+  background-image: url("../image/aside-left.jpg");
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.news-card.card-bottom .card-square::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 91, 142, 0.575);
+}
+
+.news-card.card-bottom .card-square .card-text {
+  color: #f4f4f4;
+}
+
+/* news-card { card-bottom } card-rectangle */
+
+.news-card.card-bottom .card-rectangle {
+  display: flex;
+  align-items: center;
+}
+
+.news-card.card-bottom .card-img {
+  background-image: url("../image/aside-right.jpg");
+  background-size: 100% 100%;
+}
+
+.news-card.card-bottom .card-rectangle .card-text {
+  color: #f4f4f4;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+/* iPad Air */
+
+@media (max-width: 1100px) {
+  .container {
+    width: 820px;
+  }
+  .col-8 {
+    width: 100%;
+  }
+  .col-4 {
+    width: 50%;
+  }
+}
+
+/* iPad Mini */
+
+@media (max-width: 880px) {
+  .container {
+    width: 100%;
+  }
+  .news-area {
+    padding: 0 25px;
+  }
+  .news-area .news-label {
+    margin: 0 25px;
+    left: -10px;
+  }
+  .news-card.card-top .card-rectangle .card-title {
+    margin-top: 2rem;
+  }
+  .news-card.card-top .card-rectangle .card-text {
+    margin-top: 1rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .col-4 {
+    width: 100%;
+  }
+  .news-card {
+    height: auto;
+  }
+  .news-card .card-square {
+    height: 300px;
+    width: 100%;
+  }
+  .news-card.card-top {
+    flex-direction: column;
+  }
+  .news-card.card-top .card-img {
+    width: 100%;
+    height: 300px;
+  }
+  .news-card.card-top .card-rectangle {
+    width: 100%;
+    min-height: 300px;
+  }
+  .triangle::before {
+    display: none;
+  }
+
+  /* ----------------------- */
+
+  .news-card.card-bottom {
+    margin-bottom: 30px;
+  }
+  .news-card.card-bottom .card-img {
+    width: 0;
+  }
+  .news-card.card-bottom .card-rectangle {
+    width: 100%;
+    height: 300px;
+    background-image: url("../image/aside-right.jpg");
+    background-size: 100% 100%;
+  }
+  .card-overlay::before {
+    background-image: linear-gradient(to right, #fb7c18, #d3425c3d);
+  }
+}
+
+/* The End  */
